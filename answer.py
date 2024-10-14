@@ -16,6 +16,7 @@ async def resp(content):
     }
     try:
         response = requests.get(URL, params=params)
+        print(response.url)
         data = response.json()
         print(data)
         temp = data["list"][0]["main"]["temp"]
